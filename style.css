@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+    scroll-behavior: smooth;
+}
+
+
+img{
+    width: 80%;
+    padding-bottom:50px;
+    height: 750px;
+    padding-top: 30px;
+}
+
+
+/*************************** Navbar animation and hover effects*******************************/
+.nav-link{
+    font-size: 20px;
+}
+
+.navbar-nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar-nav li a{
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar-nav li a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #5e5c58;
+    transition: width 0.5s;
+}
+
+.navbar-nav li a:hover::after{
+    width: 100%;
+}
+
+.nav-link:hover{
+    filter: brightness(110%);
+}
+
+header{
+    /* background: #FFF5DA; */
+    /* background: #F8F991;  */
+    background: #ffffff;
+    @media (min-width: 375px) and (max-width: 812px) {
+        width: 80px;
+    }
+}
+
+h3{
+    font-size: 20px;
+}
+
+heading{
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-weight: 700;
+    /* font-size: 3.2rem; */
+    width: 0ch;
+    font-size: 120px;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* For iPad, iPad Pro and other tablets  */
+@media (min-width:768px) and (max-width:1024px) {
+    .text heading{
+        font-size: 70px;
+        text-align: justify;
+    }
+    html,body{
+        padding:0px;
+        margin:0;
+        overflow-x: hidden;
+        vertical-align: middle;
+    }
+    .panel{
+        height: 10vh;
+        border-radius: none;
+    }
+    /* .panel:nth-of-type(1),
+    .panel:nth-of-type(2)
+    .panel:nth-of-type(){
+        display: none;
+        
+    } */
+}
+
+/* For iPhone and other mobile devices */
+@media (min-width:375px) and (max-width:767px) {
+    .text heading{
+        font-size: 90px;
+        text-align: justify;
+    }
+    header .text{
+        position: relative;
+        text-align: center;
+    
+    }
+    html,body{
+        padding:0px;
+        margin:0;
+        overflow-x: hidden;
+        vertical-align: middle;
+    }
+
+    #center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    #center-two{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 30px;
+    }
+
+    .panel{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40vh;
+        border-radius: 50px;
+        /* color: white;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 5px;
+        position: relative; /*h3 will be inside*/
+       /* -webkit-transition:all 700ms ease-in; */
+    }
+
+    .swipe-slide img{
+        width: 20px;
+        height: 30px;
+    }
+}
+
+
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative; /*h3 will be inside*/
+    -webkit-transition:all 700ms ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* @media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+        
+    }
+} */
+
+/* @media screen and (max-width: 767px){ */
+    /*Tablets*/
+
+/* } */
+
+/* @media (min-width: 768px )and (max-width:991px){
+    .headerset h2{
+        font-size: 42px;
+    }
+    
+    .headerset h1{
+        font-size: 62px;
+        font-weight: bold;
+    }
+
+    .ourservices{
+        height: 1300px;
+    }
+
+    .our-team{
+        height: 1500px;
+    }
+
+    .portfolio{
+        height: 2600px;
+    }
+
+    .our-team {
+        height: 2000px ;
+    }
+}
+
+@media(min-width:575px) and(max-width:767px){
+
+}
+
+@media (min-width: 480px) and(max-width:574px){
+
+}
+
+@media (max-width:479px) {
+    .headerset h2{
+        font-size: 22px;
+    }
+    
+    .headerset h1{
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .ourservices{
+        height: 1200px;
+    }
+
+    .our-team{
+        height: 1500px;
+    }
+
+    .portfolio{
+        height: 2700px;
+    }
+
+    .our-team {
+        height: 1400px ;
+    }
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+        
+    }
+} */
+
+/* @media (min-width: 768px) and(max-width:1024px){
+    .container{
+        width: 250vw;
+    }
+
+    heading{
+        font-size: 50px;
+
+    }
+} */
+
+
+
+/****************************************** About section********************************/
+.about{
+    /* background: #FFF5DA; */
+    /* background: #9AB87A; */
+    background: black;
+}
+
+.about .text h2{
+    /* color: #5D534A; */
+    /* color: #3D315B; */
+    color: #bfbfbf;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+
+/* Team Section */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+
+/* Project section */
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.swipe-slider .Text h3 span{
+    font-weight: 500;
+}
+
+
+
+
